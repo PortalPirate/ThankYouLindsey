@@ -1,0 +1,32 @@
+@import 'bulma';
+
+@mixin fill-page($size: 100) {
+    height: #{$size}vh;
+    width: #{$size}vw;
+}
+
+
+html {
+    @include fill-page;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    @include fill-page(98);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: thick double purple;
+}
+
+.slideBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+}

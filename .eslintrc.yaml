@@ -1,0 +1,249 @@
+# this is the top, don't look for eslint options above here
+root: true
+
+env:
+    es6: true
+    browser: true
+    node: true
+
+parserOptions:
+    parser: babel-eslint
+    ecmaVersion: 10
+    sourceType: module
+
+extends:
+    - eslint:recommended
+    - plugin:promise/recommended
+
+plugins:
+    - promise
+    - svelte3
+
+overrides:
+    -
+        files:
+            - "*.svelte"
+        rules:
+            no-invalid-this:
+                - off
+
+settings:
+    # Don't lint style blocks.
+    # The plugin only knows css. It currently cannot lint our scss styles.
+    # https://github.com/sveltejs/eslint-plugin-svelte3/issues/10
+    svelte3/ignore-styles: true
+
+rules:
+    indent:
+        - error
+        - 4
+        - SwitchCase: 1
+          FunctionDeclaration:
+              body: 1
+          FunctionExpression:
+              body: 1
+    linebreak-style:
+        - error
+        - unix
+    promise/no-nesting:
+        - off
+    promise/no-promise-in-callback:
+        - error
+    promise/no-callback-in-promise:
+        - error
+    promise/avoid-new:
+        - error
+    quotes:
+        - error
+        - single
+        - avoidEscape: true
+          allowTemplateLiterals: true
+    semi:
+        - error
+        - always
+    no-template-curly-in-string:
+        - error
+    curly:
+        - error
+    default-case:
+        - error
+    dot-location:
+        - error
+        - property
+    eqeqeq:
+        - error
+    no-caller:
+        - error
+    no-eval:
+        - error
+    no-implied-eval:
+        - error
+    no-extend-native:
+        - error
+    no-extra-bind:
+        - error
+    no-global-assign:
+        - error
+    no-implicit-globals:
+        - error
+    no-invalid-this:
+        - error
+    no-iterator:
+        - error
+    no-labels:
+        - error
+    no-loop-func:
+        - error
+    no-multi-spaces:
+        - error
+    ignoreEOLComments: true
+    no-new-func:
+        - error
+    no-new-wrappers:
+        - error
+    no-new:
+        - error
+    no-return-assign:
+        - error
+    no-redeclare:
+        - error
+    no-self-assign:
+        - error
+    no-self-compare:
+        - error
+    no-sequences:
+        - error
+    no-throw-literal:
+        - error
+    no-unmodified-loop-condition:
+        - error
+    no-unused-expressions:
+        - error
+    no-unused-vars:
+        - error
+        - vars: all
+          args: none
+    no-useless-call:
+        - error
+    no-useless-concat:
+        - error
+    no-useless-escape:
+        - error
+    no-void:
+        - error
+    no-with:
+        - error
+    no-undef-init:
+        - error
+    no-use-before-define:
+        - error
+        - functions: false
+    no-process-env:
+        - error
+    global-require:
+        - error
+    no-sync:
+        - error
+    block-spacing:
+        - error
+    brace-style:
+        - error
+    comma-dangle:
+        - error
+        - always-multiline
+    comma-spacing:
+        - error
+    comma-style:
+        - error
+        - last
+    consistent-this:
+        - error
+    eol-last:
+        - error
+    func-call-spacing:
+        - error
+    keyword-spacing:
+        - error
+    line-comment-position:
+        - error
+    lines-around-comment:
+        - error
+        - allowBlockStart: true
+    max-len:
+        - error
+    multiline-ternary:
+        - error
+    new-cap:
+        - error
+        - capIsNewExceptions: ['E']
+    new-parens:
+        - error
+    newline-per-chained-call:
+        - error
+    no-array-constructor:
+        - error
+    no-bitwise:
+        - error
+    no-inline-comments:
+        - error
+    no-lonely-if:
+        - error
+    no-mixed-operators:
+        - error
+    no-plusplus:
+        - error
+    no-tabs:
+        - error
+    no-trailing-spaces:
+        - error
+    no-unneeded-ternary:
+        - error
+    no-whitespace-before-property:
+        - error
+    object-curly-spacing:
+        - error
+    one-var-declaration-per-line:
+        - error
+    operator-assignment:
+        - error
+    operator-linebreak:
+        - error
+        - before
+    padded-blocks:
+        - error
+        - never
+    space-before-blocks:
+        - error
+    space-before-function-paren:
+        - error
+        - named: never
+          asyncArrow: always
+          anonymous: never
+    space-infix-ops:
+        - error
+    space-unary-ops:
+        - error
+    spaced-comment:
+        - error
+    unicode-bom:
+        - error
+    arrow-body-style:
+        - error
+        - as-needed
+        - requireReturnForObjectLiteral: true
+    arrow-parens:
+        - error
+    generator-star-spacing:
+        - error
+    no-confusing-arrow:
+        - error
+    no-var:
+        - error
+    prefer-const:
+        - error
+    prefer-rest-params:
+        - error
+    prefer-spread:
+        - error
+    rest-spread-spacing:
+        - error

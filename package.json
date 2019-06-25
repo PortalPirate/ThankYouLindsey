@@ -1,0 +1,48 @@
+{
+  "name": "card-for-lindsey",
+  "version": "0.0.1",
+  "description": "A card for Lindsey",
+  "main": "main/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch webpack.config.babel.js --exec 'pnpx webpack-dev-server'",
+    "build": "webpack --mode production"
+  },
+  "author": "PortalPirate",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/preset-env": "7.4.5",
+    "bulma": "0.7.5",
+    "css-loader": "2.1.1",
+    "dotenv-webpack": "1.7.0",
+    "eslint": "5.16.0",
+    "eslint-loader": "2.1.2",
+    "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-svelte3": "1.2.3",
+    "friendly-errors-webpack-plugin": "1.7.0",
+    "html-webpack-plugin": "3.2.0",
+    "json-loader": "0.5.7",
+    "mini-css-extract-plugin": "0.7.0",
+    "node-sass": "4.12.0",
+    "nodemon": "1.19.1",
+    "sass-loader": "7.1.0",
+    "serialize-error": "4.1.0",
+    "style-loader": "0.23.1",
+    "svelte": "3.4.4",
+    "svelte-loader": "2.13.4",
+    "svelte-preprocess-sass": "0.2.0",
+    "webpack": "4.33.0",
+    "webpack-build-notifier": "1.0.3",
+    "webpack-dashboard": "3.0.7",
+    "webpack-dev-server": "3.7.1",
+    "yaml-loader": "0.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/register": "7.4.4",
+    "babel-loader": "8.0.6",
+    "nodemon-webpack-plugin": "4.0.8",
+    "webpack-cli": "3.3.3"
+  }
+}
