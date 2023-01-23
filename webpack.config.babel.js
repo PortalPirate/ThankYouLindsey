@@ -104,13 +104,24 @@ function createConfig(_env, {mode = 'development'}) {
     } else {
         devtool = false;
     }
+    let publicPath;
+    if (dev) {
+        publicPath = '/';
+    } else {
+        publicPath = '/ThankYouLindsey';
+    }
 
     return [
         {
             devtool,
             context: resolve(__dirname),
+            optimization: {
+                minimize: !dev,
+            },
             output: {
                 filename: 'dist-renderer.js',
+                path: resolve(__dirname, 'build'),
+                publicPath,
             },
             resolve: {
                 mainFields: mainFields,

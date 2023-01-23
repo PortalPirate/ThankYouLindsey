@@ -1,4 +1,6 @@
-@import 'bulma';
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/layout/section.sass";
+@import "bulma/sass/base/minireset.sass";
 
 @mixin fill-page($size: 100) {
     height: #{$size}vh;

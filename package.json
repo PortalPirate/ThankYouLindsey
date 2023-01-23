@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch webpack.config.babel.js --exec 'pnpx webpack-dev-server'",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d build"
   },
   "author": "PortalPirate",
   "license": "MIT",
@@ -42,6 +43,7 @@
     "@babel/core": "7.4.5",
     "@babel/register": "7.4.4",
     "babel-loader": "8.0.6",
+    "gh-pages": "2.0.1",
     "nodemon-webpack-plugin": "4.0.8",
     "webpack-cli": "3.3.3"
   }
